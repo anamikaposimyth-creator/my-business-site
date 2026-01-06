@@ -13,6 +13,7 @@
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
   }
@@ -29,7 +30,7 @@
                 <span class="text-xl font-bold tracking-tight text-gray-900">Lumina</span>
             </a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="nav-link text-sm font-medium">Home</a>
+                <a href="index.html" class="nav-link text-sm font-medium text-blue-600">Home</a>
                 <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Services</a>
                 <a href="use-cases.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Use Cases</a>
                 <a href="team.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Team</a>
@@ -37,8 +38,8 @@
                 <a href="faqs.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">FAQs</a>
                 <a href="contact.html" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-blue-700 transition-all">Contact Us</a>
             </div>
-            <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <button id="mobile-menu-toggle" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden glass absolute top-full left-0 right-0 border-b border-gray-100 p-6 flex flex-col space-y-4 shadow-xl">
@@ -53,7 +54,7 @@
     </nav>
 
     <!-- Hero -->
-    <section class="relative pt-48 pb-32 overflow-hidden">
+    <section class="relative pt-40 pb-32 overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-gradient-to-b from-blue-50/40 via-purple-50/20 to-transparent -z-10"></div>
         <div class="max-w-7xl mx-auto px-6 text-center">
             <div class="reveal">
@@ -79,34 +80,11 @@
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-10">Trusted by Market Leaders & Innovators</p>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 grayscale opacity-40">
-                <div class="text-2xl font-black italic tracking-tighter">FINTECH.CO</div>
+                <div class="text-2xl font-black italic">FINTECH.CO</div>
                 <div class="text-2xl font-black tracking-widest">CLOUDLY</div>
                 <div class="text-2xl font-serif font-bold">HealthPulse</div>
                 <div class="text-2xl font-mono font-bold">NEXT-GEN</div>
                 <div class="text-2xl font-black italic">GLOBAL_LOGISTICS</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Summary Section -->
-    <section class="py-32 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="reveal p-10 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all">
-                    <div class="text-4xl mb-6">⚡</div>
-                    <h3 class="text-2xl font-bold mb-4">Scalability</h3>
-                    <p class="text-gray-500">Infrastructure designed to grow with your user base, ensuring zero downtime during peaks.</p>
-                </div>
-                <div class="reveal p-10 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all" style="transition-delay: 100ms;">
-                    <div class="text-4xl mb-6">🛡️</div>
-                    <h3 class="text-2xl font-bold mb-4">Security</h3>
-                    <p class="text-gray-500">Zero-trust principles applied to every layer of your technical architecture.</p>
-                </div>
-                <div class="reveal p-10 bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all" style="transition-delay: 200ms;">
-                    <div class="text-4xl mb-6">🤖</div>
-                    <h3 class="text-2xl font-bold mb-4">Intelligence</h3>
-                    <p class="text-gray-500">Custom AI solutions that automate complex workflows and provide real-time insights.</p>
-                </div>
             </div>
         </div>
     </section>
