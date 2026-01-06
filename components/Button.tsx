@@ -1,18 +1,21 @@
 
 import React from 'react';
 
+// Added type prop to support standard HTML button types (submit, button, reset) and fix TS errors in forms
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   className?: string;
   onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({ 
   children, 
   variant = 'primary', 
   className = '', 
-  onClick 
+  onClick,
+  type = 'button'
 }) => {
   const baseStyles = "px-6 py-2.5 rounded-full font-medium transition-all duration-300 transform active:scale-95 focus:outline-none";
   
@@ -25,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button 
+      type={type}
       onClick={onClick}
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
