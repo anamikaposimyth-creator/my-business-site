@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,52 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina Dynamics | Engineering the Future</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #ffffff;
-            color: #111827;
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #2563eb, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #d1d5db;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #9ca3af;
-        }
-    </style>
 <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
 </head>
-<body>
-    <div id="root"></div>
+<body class="bg-white text-gray-900 font-['Inter']">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">L</div>
+                <span class="text-xl font-bold tracking-tight text-gray-900">Lumina</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="nav-link text-sm font-medium text-blue-600">Home</a>
+                <a href="services.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Services</a>
+                <a href="use-cases.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Use Cases</a>
+                <a href="team.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Team</a>
+                <a href="blog.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">Blog</a>
+                <a href="faqs.html" class="nav-link text-sm font-medium text-gray-600 hover:text-blue-600">FAQs</a>
+                <a href="contact.html" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-blue-700 transition-all">Contact Us</a>
+            </div>
+            <button id="mobile-menu-toggle" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden glass absolute top-full left-0 right-0 border-b border-gray-100 p-6 flex flex-col space-y-4 shadow-xl">
+            <a href="index.html" class="text-lg font-medium text-blue-600">Home</a>
+            <a href="services.html" class="text-lg font-medium text-gray-800">Services</a>
+            <a href="use-cases.html" class="text-lg font-medium text-gray-800">Use Cases</a>
+            <a href="team.html" class="text-lg font-medium text-gray-800">Team</a>
+            <a href="blog.html" class="text-lg font-medium text-gray-800">Blog</a>
+            <a href="faqs.html" class="text-lg font-medium text-gray-800">FAQs</a>
+            <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-full font-medium text-center">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative pt-40 pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] bg-gradient-to-b from-blue-50/40 via-purple-50/20 to-transparent -z-10"></div>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="reveal">
+                <span class="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-widest mb-6">Engineering the Enterprise Future</span>
+            </div>
+            <div class="reveal" style="transition-delay: 100ms;">
+                <h1 class="text-5xl md:text-8xl font-extrabold text-gray-900 tracking-tight leading-[1.05] mb-8">High-Performance <br><span class="text-gradient">Digital Foundations</span></h1>
+            </div>
+            <div class="reveal" style="transition-delay: 200ms;">
+                <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed font-light">We solve high-stakes technical challenges for organizations that demand precision. From cloud-native scaling to proprietary AI, Lumina builds the architecture of tomorrow.</p>
+            </div>
+            <div class="reveal" style="transition-delay: 300ms;">
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="contact.html" class="bg-blue-600 text-white px-10 py-5 rounded-full font-medium hover:bg-blue-700 shadow-blue-200 shadow-xl text-lg transition-all">Start a Consultation</a>
+                    <a href="services.html" class="border-2 border-gray-200 text-gray-700 px-10 py-5 rounded-full font-medium hover:border-gray-900 hover:text-gray-900 text-lg transition-all">Explore Capabilities</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-12 border-y border-gray-100 bg-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-10">Trusted by Market Leaders & Innovators</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 grayscale opacity-40">
+                <div class="text-2xl font-black italic">FINTECH.CO</div>
+                <div class="text-2xl font-black tracking-widest">CLOUDLY</div>
+                <div class="text-2xl font-serif font-bold">HealthPulse</div>
+                <div class="text-2xl font-mono font-bold">NEXT-GEN</div>
+                <div class="text-2xl font-black italic">GLOBAL_LOGISTICS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer-placeholder"></footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

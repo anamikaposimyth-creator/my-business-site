@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Lumina Dynamics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-900 font-['Inter'] pt-32">
+    <nav id="navbar-placeholder"></nav>
+    <div class="max-w-7xl mx-auto px-6 pb-32">
+        <div class="flex flex-col lg:flex-row gap-24">
+            <div class="lg:w-2/5 reveal">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-gray-900 mb-8 leading-[1.1] tracking-tight">Start the <br><span class="text-blue-600">Conversation.</span></h1>
+                <p class="text-xl text-gray-600 mb-16 font-light">Technical experts discussing your business problems. No sales pressure.</p>
+                <div class="space-y-12">
+                    <div class="flex items-start space-x-6">
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 shadow-sm"><svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg></div>
+                        <div><h4 class="font-bold text-gray-900 text-xl mb-2">What happens next?</h4><p class="text-gray-500">Expect a technical discovery call invite within 4 business hours.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-3/5 reveal">
+                <div class="bg-white p-12 md:p-16 rounded-[4rem] shadow-2xl border border-gray-100">
+                    <form id="contact-form" class="space-y-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <input type="text" placeholder="Full Name" class="w-full bg-gray-50 border-b-2 border-gray-100 focus:border-blue-600 px-6 py-4 focus:outline-none focus:bg-white text-lg font-medium transition-all" required>
+                            <input type="email" placeholder="Work Email" class="w-full bg-gray-50 border-b-2 border-gray-100 focus:border-blue-600 px-6 py-4 focus:outline-none focus:bg-white text-lg font-medium transition-all" required>
+                        </div>
+                        <textarea rows="5" placeholder="Briefly describe the challenge" class="w-full bg-gray-50 border-b-2 border-gray-100 focus:border-blue-600 px-6 py-4 focus:outline-none focus:bg-white text-lg font-medium transition-all resize-none" required></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-6 text-xl font-black rounded-3xl shadow-2xl shadow-blue-100 hover:bg-blue-700 transition-all">Request Technical Review</button>
+                    </form>
+                    <div id="form-success" class="hidden text-center py-10">
+                        <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg></div>
+                        <h3 class="text-3xl font-bold">Inquiry Received</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer-placeholder"></footer>
+    <script src="script.js"></script>
+</body>
+</html>
